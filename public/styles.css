@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+body {
+  background: #EEEEEE;
+  padding: 0;
+  
+}
+/* Header */
+header {
+  background-color: #F5F5F5;
+  padding: 10px 42px;
+  width: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+header h1 {
+  color: grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, cursive;
+  font-weight: 200;
+}
+/* Create a new note */
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #AAC4FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+/* Notes */
+.notes-area {
+  display: grid;
+  padding: 32px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 4fr));
+  column-gap: 20px;
+  row-gap: 10px;
+}
+.note {
+  background: #FFFFFF;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #CCCCCC;
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  
+}
+.display-time {
+  font-size: 1em !important;
+  color: #CCCCCC;
+}
+.note svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  color: #AAC4FF;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+}
+.note svg:hover {
+  color: #DDDDDD;
+}
+.display-scroll {
+  overflow-y: scroll;
+  max-height: 150px;
+}
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #F7F7F7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #AAC4FF;
+  border-radius: 10px;
+}
+/* Footer */
+footer {
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+}
+footer p {
+  color: #CCCCCC;
+}
+/* Settings */
+@media screen and (max-width: 825px) {
+  .note {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 823px) {
+  .note {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 799px) {
+  .note {
+    width: 100%;
+  }
+  form.create-note {
+    width: 90%;
+  }
+  header h1 {
+    text-align: center;
+  }
+}
